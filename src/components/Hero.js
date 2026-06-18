@@ -31,7 +31,7 @@ const Hero = () => {
             View Projects
           </a>
           <a
-            href="https://drive.google.com/file/d/YOUR_COPIED_DRIVE_FILE_ID_HERE/view?usp=sharing"
+            href="https://drive.google.com/file/d/1CSoG8KckeG8yDttzSV_ijoJQ9wMOYj1O/view?usp=drivesdk"
             className="hero-btn btn-secondary"
             target="_blank"
             rel="noreferrer"

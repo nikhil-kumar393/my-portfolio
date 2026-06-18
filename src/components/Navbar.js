@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Clickable Brand Identity */}
         <a href="#home" className="brand-logo" onClick={scrollToTop}>
-          <span className="logo-text">NIKHIL KUMAR</span>
+          <span className="logo-text">NIKHIL KUMAR BATTULA</span>
         </a>
 
         {/* 3-Line Hamburger Icon Container */}
@@ -48,7 +48,7 @@ const Navbar = () => {
           <li>
             {/* Kept static class name; CSS handles the desktop-vs-mobile transformation */}
             <a href="#contact" className="contact-btn" onClick={handleLinkClick}>
-              Contact Me ✉
+              Contact Me
             </a>
           </li>
         </ul>
