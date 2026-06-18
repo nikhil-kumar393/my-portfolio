@@ -1,0 +1,233 @@
+/* Container Foundations */
+.projects-section {
+  padding: 100px 24px;
+  background-color: #020617; 
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Core Title Formatting */
+.projects-section .section-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: -0.05em;
+  background: linear-gradient(to right, #6366f1, #38bdf8);
+  -background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Fluid Responsive Card Layout Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Card Styling Elements */
+.project-card {
+  background-color: #0f172a; 
+  border: 1px solid #1e293b;
+  padding: 32px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #334155;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.03);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.project-icon {
+  font-size: 22px;
+  margin-top: -2px;
+}
+
+.project-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 14.5px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  flex-grow: 1; 
+}
+
+/* Technical Language Pills */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 28px;
+}
+
+.tech-pill {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Navigation Links Footer Block */
+.project-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #1e293b;
+  padding-top: 18px;
+}
+
+.proj-link {
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.link-github {
+  color: #64748b;
+}
+
+.link-github:hover {
+  color: #f8fafc;
+}
+
+.link-demo {
+  color: #38bdf8;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.link-demo span {
+  transition: transform 0.2s ease;
+}
+
+.link-demo:hover {
+  color: #7dd3fc;
+}
+
+.link-demo:hover span {
+  transform: translateX(3px);
+}
+
+/* Global "View More on GitHub" Button Styles */
+.view-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; /* Space separating button from the grid layout */
+}
+
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f8fafc;
+  background-color: transparent;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1px solid #334155;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+ 
+}
+
+.view-more-btn span {
+  font-size: 12px;
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.view-more-btn:hover {
+  border-color: #38bdf8;
+  background-color: rgba(56, 189, 248, 0.03);
+  box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.15);
+}
+
+.view-more-btn:hover span {
+  color: #38bdf8;
+  transform: translate(2px, -2px); /* Diagonal micro-slide for arrow */
+}
+
+/* Mobile Screen optimization breaks */
+@media (max-width: 480px) {
+  .project-card {
+    padding: 24px;
+  }
+  .view-more-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background: radial-gradient(800px circle at var(--x, 0px) var(--y, 0px), rgba(56, 189, 248, 0.06), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* Update these specific blocks in your Projects.css */
+.projects-section {
+  padding: 40px 24px; /* Reduced from 100px to 40px to minimize section gaps */
+  background-color: #020617; 
+  display: flex;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.projects-section .section-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 32px; /* Reduced from 50px to bring the cards closer to the title */
+  letter-spacing: -0.05em;
+  background: linear-gradient(to right, #6366f1, #38bdf8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.view-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px; /* Reduced from 50px to tighten up the final bottom button gap */
+}

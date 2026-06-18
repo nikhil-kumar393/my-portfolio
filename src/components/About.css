@@ -1,0 +1,296 @@
+/* Container Foundations */
+.about-section {
+  padding: 100px 24px;
+  background-color: #020617; /* Slate 950 - Modern industry deep background */
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px; /* Keeps the spacing consistent across all sections */
+}
+
+.about-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Typography elements */
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: -0.05em;
+  background: linear-gradient(to right, #6366f1, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tabs Navigation Bar */
+.tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  background-color: #0f172a; /* Slate 900 */
+  padding: 6px;
+  border-radius: 30px;
+  border: 1px solid #1e293b;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+  padding: 10px 22px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-btn:hover {
+  color: #f8fafc;
+}
+
+.tab-btn.active {
+  background-color: #1e293b;
+  color: #38bdf8; /* Soft blue highlight */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dynamic Window Panel */
+.display-panel {
+  background: rgba(15, 23, 42, 0.6); /* Translucent Glass */
+  border: 1px solid #1e293b;
+  padding: 40px;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Header formatting */
+.section-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-top: 0;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 14px;
+}
+
+/* Tab Layout Content Fade-in animation */
+.tab-content {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vertical Timeline (Education Section) */
+.timeline {
+  position: relative;
+  border-left: 2px solid #1e293b;
+  padding-left: 24px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -31px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #020617;
+  border: 2px solid #38bdf8;
+}
+
+.timeline-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #f1f5f9;
+}
+
+.college {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0 0 12px 0;
+}
+
+.edu-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Status Badges */
+.badge {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.badge-ongoing {
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Professional Lists (Experience & Training) */
+.exp-role-title {
+  margin-bottom: 20px;
+}
+
+.exp-role-title h4 {
+  font-size: 18px;
+  margin: 0 0 4px 0;
+  color: #f1f5f9;
+}
+
+.company-tag {
+  font-size: 14px;
+  color: #818cf8;
+  font-weight: 500;
+}
+
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.styled-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+}
+
+/* Modern Pill Tags (Skills Layout) */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.skill-group h5 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin: 0 0 12px 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #1e293b;
+  color: #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid transparent;
+}
+
+.tag-accent {
+  background: rgba(56, 189, 248, 0.06);
+  border-color: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.tag-ai {
+  background: rgba(168, 85, 247, 0.06);
+  border-color: rgba(168, 85,  purple, 0.15);
+  border-color: rgba(168, 85, 247, 0.2);
+  color: #c084fc;
+}
+
+/* Modern Cards Grid (Certifications) */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.cert-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.2s ease;
+}
+
+.cert-card:hover {
+  border-color: #334155;
+}
+
+.cert-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #f1f5f9;
+  line-height: 1.4;
+}
+
+.cert-card p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.cert-link {
+  font-size: 13px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: auto;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.cert-link:hover {
+  color: #7dd3fc;
+}

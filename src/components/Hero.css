@@ -1,0 +1,280 @@
+/* Core Layout Grid & Canvas */
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 80px); /* Factors in standard Navbar heights */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020617; /* Matches Slate 950 deep theme */
+  padding: 40px 24px;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Ambient Radial Glow backing */
+.hero-glow-effect {
+  position: absolute;
+  top: 15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(6, 182, 212, 0.03) 70%, transparent 100%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Spotlight Availability Badge */
+.spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #10b981; /* Green indicator */
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Heading Typography */
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #f8fafc;
+  margin: 0 0 16px 0;
+  line-height: 1.15;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #38bdf8; /* Accent highlight blue */
+  margin: 0 0 24px 0;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #94a3b8; /* Calmed down scannable copy */
+  margin: 0 0 40px 0;
+  max-width: 640px;
+}
+
+/* Button UI Action Group Matrix */
+.hero-action-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary {
+  background-color: #38bdf8;
+  color: #020617;
+}
+
+.btn-primary:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+}
+
+.btn-secondary:hover {
+  background-color: #1e293b;
+  border-color: #475569;
+  transform: translateY(-2px);
+}
+
+/* Contextual Text Link Button alternative */
+.hero-link-btn {
+  font-size: 14px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.hero-link-btn span {
+  transition: transform 0.2s ease;
+}
+
+.hero-link-btn:hover {
+  color: #38bdf8;
+}
+
+.hero-link-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* Responsiveness break thresholds */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  .hero-action-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .hero-btn {
+    width: 100%; /* Scales buttons fluidly to block blocks on layout drop */
+  }
+  .hero-link-btn {
+    margin-top: 8px;
+  }
+}
+
+/* Update these specific blocks in your Hero.css */
+.hero-section {
+  position: relative;
+  min-height: 75vh; /* Reduced from calc(100vh - 80px) to keep content compact */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020617;
+  padding: 40px 24px; /* Reduced vertical padding */
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin: 0 0 24px 0; /* Reduced from 40px to pull the action buttons closer */
+  max-width: 640px;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 75vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #020617;
+  
+  /* ADD THIS LINE BELOW: Pushes your hero content down exactly past the height of the navbar */
+  margin-top: 70px; 
+  
+  padding: 40px 24px; 
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Update or verify these specific class blocks inside your Hero.css */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Premium Primary Accent Button Layout */
+.hero-btn.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #020617;
+  background: linear-gradient(135deg, #38bdf8, #6366f1); /* Premium matching theme gradient */
+  padding: 12px 28px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* Elegant Text Secondary Link Action Layout */
+.hero-secondary-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.hero-secondary-link:hover {
+  color: #38bdf8; /* Highlight shift matching global link rules */
+  transform: translateX(4px); /* Interactive nudge indicator */
+}
